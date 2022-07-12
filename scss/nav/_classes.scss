@@ -1,0 +1,37 @@
+@use '../custom';
+
+.cal {
+    max-width: 400px;
+    padding: auto;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.cal-result {
+    height: 140px;
+    background: rgb(240, 239, 239) !important;
+    padding: 15px 5px;
+}
+
+.cal-item {
+    height: 80px;
+    background: rgb(55, 54, 54);
+    color: whitesmoke !important;
+    text-align:center;
+    font-size: 25px;
+    border: 1px solid antiquewhite;
+}
+
+.cal-secondary-but1 {
+    color: black !important;
+    font-weight: 700;
+    background: wheat;
+    text-align: center;
+}
+
+.cal-secondary-but2 {
+    
+    background: rgb(34, 34, 34);
+    font-weight: 700;
+    border: 1px solid rgb(53, 53, 53) !important;
+}

@@ -9,9 +9,50 @@
   <link rel="stylesheet" href="./assets/scss/styles.css">
 </head>
 
-<body>
+<body class=" bg-secondary">
+  <nav class="navbar navbar-expand navbar-dark bg-primary container-fluid shadow">
+      <div class="nav navbar-nav">
+          <a class="nav-item nav-link active fs-3 fw-bold" href="#">Calculator <span class="visually-hidden">(current)</span></a>
+      </div>
+  </nav>
 
-  <script src="./javaScript/app.js"></script>
+  <div class="container cal mt-5 shadow ">
+    <div class="row bg-danger row-cols-1 cal-result">
+      <div class="col">Result</div>
+    </div>
+    <div class="row  row-cols-4 ">
+      <div class="col cal-item cal-secondary-but2">%</div>
+      <div class="col cal-item cal-secondary-but2">CE</div>
+      <div class="col cal-item cal-secondary-but2">C</div>
+      <div class="col cal-item cal-secondary-but2">/</div>
+    </div>
+    <div class="row  row-cols-4 ">
+      <div class="col cal-item">1</div>
+      <div class="col cal-item">2</div>
+      <div class="col cal-item">3</div>
+      <div class="col cal-item cal-secondary-but2">*</div>
+    </div>
+    <div class="row  row-cols-4 ">
+      <div class="col cal-item">4</div>
+      <div class="col cal-item">5</div>
+      <div class="col cal-item">6</div>
+      <div class="col cal-item cal-secondary-but2">-</div>
+    </div>
+    <div class="row  row-cols-4 ">
+      <div class="col cal-item">7</div>
+      <div class="col cal-item">8</div>
+      <div class="col cal-item">9</div>
+      <div class="col cal-item cal-secondary-but2">+</div>
+    </div>
+    <div class="row  row-cols-4 ">
+      <div class="col cal-secondary-but1">+/-</div>
+      <div class="col cal-item">0</div>
+      <div class="col cal-secondary-but1">.</div>
+      <div class="col cal-item bg-danger">=</div>
+    </div>
+  </div>
+
 </body>
+<script src="./javaScript/app.js"></script>
 
 </html>
