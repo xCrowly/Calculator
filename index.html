@@ -18,37 +18,38 @@
 
   <div class="container cal mt-5 shadow-lg ">
     <div class="row bg-danger row-cols-1 cal-result">
-      <div class="col">Result</div>
+      <div class="col fs-5 fw-bold" id="userForm">0</div>
+      <div class="col fs-5 text-end " id="result">0</div>
     </div>
     <div class="row  row-cols-4 ">
-      <div class="col cal-item cal-secondary-but2">%</div>
-      <div class="col cal-item cal-secondary-but2">CE</div>
-      <div class="col cal-item cal-secondary-but2">C</div>
-      <div class="col cal-item cal-secondary-but2">/</div>
+      <div class="col cal-item cal-secondary-but2" id="%" onclick="percentage();">%</div>
+      <div class="col cal-item cal-secondary-but2" id="CE" onclick="clearResult();">CE</div>
+      <div class="col cal-item cal-secondary-but2" id="C" onclick="clearInput();">C</div>
+      <div class="col cal-item cal-secondary-but2" id="/" onclick="getInpId(this.id);">/</div>
+    </div>
+    <div class="row  row-cols-4">
+      <div class="col text-info cal-item" id="1" onclick="getInpId(this.id);">1</div>
+      <div class="col cal-item" id="2" onclick="getInpId(this.id);">2</div>
+      <div class="col cal-item" id="3" onclick="getInpId(this.id);">3</div>
+      <div class="col cal-item cal-secondary-but2" id="*" onclick="getInpId(this.id);">*</div>
     </div>
     <div class="row  row-cols-4 ">
-      <div class="col cal-item">1</div>
-      <div class="col cal-item">2</div>
-      <div class="col cal-item">3</div>
-      <div class="col cal-item cal-secondary-but2">*</div>
+      <div class="col cal-item" id="4" onclick="getInpId(this.id);">4</div>
+      <div class="col cal-item" id="5" onclick="getInpId(this.id);">5</div>
+      <div class="col cal-item" id="6" onclick="getInpId(this.id);">6</div>
+      <div class="col cal-item cal-secondary-but2" id="-" onclick="getInpId(this.id);">-</div>
     </div>
     <div class="row  row-cols-4 ">
-      <div class="col cal-item">4</div>
-      <div class="col cal-item">5</div>
-      <div class="col cal-item">6</div>
-      <div class="col cal-item cal-secondary-but2">-</div>
+      <div class="col cal-item" id="7" onclick="getInpId(this.id);">7</div>
+      <div class="col cal-item" id="8" onclick="getInpId(this.id);">8</div>
+      <div class="col cal-item" id="9" onclick="getInpId(this.id);">9</div>
+      <div class="col cal-item cal-secondary-but2" id="+" onclick="getInpId(this.id);">+</div>
     </div>
     <div class="row  row-cols-4 ">
-      <div class="col cal-item">7</div>
-      <div class="col cal-item">8</div>
-      <div class="col cal-item">9</div>
-      <div class="col cal-item cal-secondary-but2">+</div>
-    </div>
-    <div class="row  row-cols-4 ">
-      <div class="col cal-secondary-but1">+/-</div>
-      <div class="col cal-item">0</div>
-      <div class="col cal-secondary-but1">.</div>
-      <div class="col cal-item bg-danger">=</div>
+      <div class="col cal-secondary-but1" id="+/-" onclick="negative();">+/-</div>
+      <div class="col cal-item" id="0" onclick="getInpId(this.id);">0</div>
+      <div class="col cal-secondary-but1" id="." onclick="getInpId(this.id);">.</div>
+      <div class="col cal-item bg-danger" id="=" onclick="getInpId(this.id);">=</div>
     </div>
   </div>
 

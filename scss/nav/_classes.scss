@@ -25,6 +25,7 @@
     font-size: 25px;
     border: 1px solid antiquewhite;
     transition: all .15s ease-in-out;
+    
     &:hover {
         background: rgb(55, 54, 54, .8);
         cursor: pointer;
@@ -42,7 +43,7 @@
     background: steelblue;
     text-align: center;
     transition: all .15s ease-in-out;
-    
+
     &:hover {
         background: rgba(70, 131, 180, 0.8);
         cursor: pointer;
