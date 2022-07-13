@@ -10117,19 +10117,39 @@ textarea.form-control-lg {
 }
 
 .cal-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
   height: 80px;
   background: rgb(55, 54, 54);
   color: whitesmoke !important;
-  text-align: center;
   font-size: 25px;
   border: 1px solid antiquewhite;
+  transition: all 0.15s ease-in-out;
+}
+.cal-item:hover {
+  background: rgba(55, 54, 54, 0.8);
+  cursor: pointer;
+  transform: scale(0.95);
 }
 
 .cal-secondary-but1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
   color: black !important;
   font-weight: 700;
-  background: wheat;
+  background: steelblue;
   text-align: center;
+  transition: all 0.15s ease-in-out;
+}
+.cal-secondary-but1:hover {
+  background: rgba(70, 131, 180, 0.8);
+  cursor: pointer;
+  transform: scale(0.95);
 }
 
 .cal-secondary-but2 {
