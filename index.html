@@ -5,7 +5,7 @@
   <title>Calculator</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
   <link rel="stylesheet" href="./assets/scss/styles.css">
 </head>
 
@@ -16,7 +16,7 @@
     </div>
   </nav>
 
-  <div class="container cal mt-5 shadow-lg ">
+  <div class="container cal mt-5 mb-5 shadow-lg">
     <div class="row bg-danger row-cols-1 cal-result">
       <div class="col fs-5 fw-bold" id="userForm">0</div>
       <div class="col fs-5 text-end " id="result">0</div>
@@ -28,7 +28,7 @@
       <div class="col cal-item cal-secondary-but2" id="/" onclick="getInpId(this.id);">/</div>
     </div>
     <div class="row  row-cols-4">
-      <div class="col text-info cal-item" id="1" onclick="getInpId(this.id);">1</div>
+      <div class="col cal-item" id="1" onclick="getInpId(this.id);">1</div>
       <div class="col cal-item" id="2" onclick="getInpId(this.id);">2</div>
       <div class="col cal-item" id="3" onclick="getInpId(this.id);">3</div>
       <div class="col cal-item cal-secondary-but2" id="*" onclick="getInpId(this.id);">*</div>

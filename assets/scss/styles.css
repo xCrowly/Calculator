@@ -10127,12 +10127,12 @@ textarea.form-control-lg {
   color: whitesmoke !important;
   font-size: 25px;
   border: 1px solid antiquewhite;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.13s ease-in-out;
 }
 .cal-item:hover {
-  background: rgba(55, 54, 54, 0.8);
+  filter: opacity(0.8);
   cursor: pointer;
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 .cal-secondary-but1 {
@@ -10144,12 +10144,12 @@ textarea.form-control-lg {
   font-weight: 700;
   background: steelblue;
   text-align: center;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.13s ease-in-out;
 }
 .cal-secondary-but1:hover {
-  background: rgba(70, 131, 180, 0.8);
+  filter: opacity(0.8);
   cursor: pointer;
-  transform: scale(0.95);
+  transform: scale(0.97);
 }
 
 .cal-secondary-but2 {

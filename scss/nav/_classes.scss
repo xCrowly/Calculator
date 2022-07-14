@@ -24,12 +24,12 @@
     color: whitesmoke !important;
     font-size: 25px;
     border: 1px solid antiquewhite;
-    transition: all .15s ease-in-out;
+    transition: all .13s ease-in-out;
     
     &:hover {
-        background: rgb(55, 54, 54, .8);
+        filter: opacity(.8);
         cursor: pointer;
-        transform: scale(.95);
+        transform: scale(.97);
     }
 }
 
@@ -42,12 +42,12 @@
     font-weight: 700;
     background: steelblue;
     text-align: center;
-    transition: all .15s ease-in-out;
+    transition: all .13s ease-in-out;
 
     &:hover {
-        background: rgba(70, 131, 180, 0.8);
+        filter: opacity(.8);
         cursor: pointer;
-        transform: scale(.95);
+        transform: scale(.97);
     }
 }
 
