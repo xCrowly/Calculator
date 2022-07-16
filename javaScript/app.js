@@ -13,7 +13,7 @@ function getInpId(clickedBut) {
 function showInput() {
     if (theFormula.innerHTML == 0) {
         theFormula.innerHTML = clickedButtonId;
-    }else{
+    } else {
         theFormula.innerHTML += clickedButtonId;
     }
 }
@@ -142,38 +142,52 @@ function negative() {
 
 // to devide the number after the last operator by 100
 function percentage() {
-    var tempForm = document.getElementById('userForm').innerHTML;
-    var foundOperator = false;
-    var numberToDivideBy100 = [];
-    for (let i = tempForm.length; i > 0; i--) {
-        if (foundOperator == true) {
-            break;
-        } else {
-            for (let j = 0; j < operators.length; j++) {
-                if (tempForm[i] == operators[j]) {
-                    console.log(tempForm[i], i);
-                    numberToDivideBy100 = tempForm.slice(i + 1, tempForm.length);
-                    console.log(numberToDivideBy100);
-                    tempForm = tempForm.slice(0, i + 1);
-                    foundOperator = true;
-                    break;
-                }
-            }
-        }
+    
+    if (theResult.innerHTML != 0) {
+        theResult.innerHTML /= 100;
     }
 
-    if (numberToDivideBy100.length != 0) {
-        if (numberToDivideBy100.length == 1 & numberToDivideBy100[0] == '.') {
-            console.log('Nan');
-        } else {
-            numberToDivideBy100 /= 100;
-            tempForm = tempForm + numberToDivideBy100;
-            document.getElementById('userForm').innerHTML = tempForm;
-        }
-    }
+    /* dump code  `\_(*_*)_/` */
+
+    // var foundOperator = false;
+    // var numberToDivideBy100 = [];
+    // for (let i = tempForm.length; i > 0; i--) {
+    //     if (foundOperator == true) {
+    //         break;
+    //     } else {
+    //         for (let j = 0; j < operators.length; j++) {
+    //             if (tempForm[i] == operators[j]) {
+    //                 console.log(tempForm[i], i);
+    //                 numberToDivideBy100 = tempForm.slice(i + 1, tempForm.length);
+    //                 console.log(numberToDivideBy100);
+    //                 tempForm = tempForm.slice(0, i + 1);
+    //                 foundOperator = true;
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // }
+
+    // if (numberToDivideBy100.length != 0) {
+    //     if (numberToDivideBy100.length == 1 & numberToDivideBy100[0] == '.') {
+    //         console.log('Nan');
+    //     } else {
+    //         numberToDivideBy100 /= 100;
+    //         tempForm = tempForm + numberToDivideBy100;
+    //         document.getElementById('userForm').innerHTML = tempForm;
+    //     }
+    // }
 }
 
 function showResult() {
-    var theFinalResult = document.getElementById('userForm').innerHTML;
-    console.log(theFinalResult);
+
+    // to check if there is an operator at the end of the formula
+    if (operators.includes(theFormula.innerHTML[theFormula.innerHTML.length - 1]) 
+    || theFormula.innerHTML[theFormula.innerHTML.length - 1] == '.') {
+        removeNumber();
+        theResult.innerHTML = eval(theFormula.innerHTML);
+    } else {
+        theResult.innerHTML = eval(theFormula.innerHTML);
+    }
+
 }
