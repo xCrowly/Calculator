@@ -9,25 +9,130 @@ function getInpId(clickedBut) {
     showInput();
 }
 
-
+// get input from 0 to 9
 function showInput() {
-    if (theFormula.innerText == 0 & clickedButtonId != '=') {
+    if (theFormula.innerHTML == 0) {
         theFormula.innerHTML = clickedButtonId;
-    } else {
-        if (theFormula.innerText.length <= 29 & clickedButtonId != '=') {
-            theFormula.innerHTML += clickedButtonId;
-        }
+    }else{
+        theFormula.innerHTML += clickedButtonId;
     }
 }
 
-// to clear the user input
-function clearInput() {
-    theFormula.innerHTML = 0;
+// to add operators in the input formula
+function operatorInput(clickedOperator) {
+    clickedButtonId = clickedOperator;
+
+    if (operators.includes(clickedButtonId)) {
+        // to make it change the theform to [+ or -] only if it is in the start
+        if (theFormula.innerHTML == 0 || theFormula.innerHTML == '+'
+            || theFormula.innerHTML == '-') {
+            switch (clickedButtonId) {
+                case '/':
+                    if (theFormula.innerHTML != '+' && theFormula.innerHTML != '-') {
+                        theFormula.innerHTML += clickedButtonId;
+                    }
+                    break;
+                case '*':
+                    if (theFormula.innerHTML != '+' && theFormula.innerHTML != '-') {
+                        theFormula.innerHTML += clickedButtonId;
+                    }
+                    break;
+                case '+':
+                    theFormula.innerHTML = clickedButtonId;
+                    break;
+                case '-':
+                    theFormula.innerHTML = clickedButtonId;
+                    break;
+            }
+        }
+        // to make it change the last operator if it is existed, not to add to it
+        else if (operators.includes(theFormula.innerHTML[theFormula.innerHTML.length - 1])
+            && theFormula.innerHTML.length > 1) {
+            switch (clickedButtonId) {
+                case '/':
+                    if (theFormula.innerHTML[theFormula.innerHTML.length - 2] == '/'
+                        || theFormula.innerHTML[theFormula.innerHTML.length - 2] == '*') {
+                        removeNumber();
+                        removeNumber();
+                        theFormula.innerHTML += '/';
+                    } else {
+                        removeNumber();
+                        theFormula.innerHTML += '/';
+                    }
+                    break;
+                case '*':
+                    if (theFormula.innerHTML[theFormula.innerHTML.length - 2] == '/'
+                        || theFormula.innerHTML[theFormula.innerHTML.length - 2] == '*') {
+                        removeNumber();
+                        removeNumber();
+                        theFormula.innerHTML += '*';
+                    } else {
+                        removeNumber();
+                        theFormula.innerHTML += '*';
+                    }
+                    removeNumber();
+                    theFormula.innerHTML += '*';
+                    break;
+                case '+':
+                    // to check if the last operator = [/ or *] so it don't remove it 
+                    if (theFormula.innerHTML[theFormula.innerHTML.length - 1] == '/'
+                        || theFormula.innerHTML[theFormula.innerHTML.length - 1] == '*') {
+
+                        theFormula.innerHTML += '+';
+                    } else {
+                        removeNumber();
+                        theFormula.innerHTML += '+';
+                    }
+                    break;
+                case '-':
+                    // to check if the last operator = [/ or *] so it don't remove it 
+                    if (theFormula.innerHTML[theFormula.innerHTML.length - 1] == '/'
+                        || theFormula.innerHTML[theFormula.innerHTML.length - 1] == '*') {
+
+                        theFormula.innerHTML += '-';
+                    } else {
+                        removeNumber();
+                        theFormula.innerHTML += '-';
+                    }
+                    break;
+            }
+        } else {
+            switch (clickedButtonId) {
+                case '/':
+
+                    theFormula.innerHTML += '/';
+                    break;
+                case '*':
+
+                    theFormula.innerHTML += '*';
+                    break;
+                case '+':
+
+                    theFormula.innerHTML += '+';
+                    break;
+                case '-':
+
+                    theFormula.innerHTML += '-';
+                    break;
+            }
+        }
+    }
+
 }
 
-// to clear the result
-function clearResult() {
+// to clear the user input
+function cleanScreen() {
+    theFormula.innerHTML = 0;
     theResult.innerHTML = 0;
+}
+
+// to remove one number from the end
+function removeNumber() {
+    if (theFormula.innerHTML.length == 1) {
+        theFormula.innerHTML = 0
+    } else {
+        theFormula.innerHTML = theFormula.innerHTML.substring(0, theFormula.innerText.length - 1);
+    }
 }
 
 // to change the sign of the result
@@ -69,5 +174,6 @@ function percentage() {
 }
 
 function showResult() {
-
+    var theFinalResult = document.getElementById('userForm').innerHTML;
+    console.log(theFinalResult);
 }
