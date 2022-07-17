@@ -13,8 +13,10 @@ function getInpId(clickedBut) {
 function showInput() {
     if (theFormula.innerHTML == 0) {
         theFormula.innerHTML = clickedButtonId;
-    } else {
+    } else if (theFormula.innerHTML.length <= 300) {
         theFormula.innerHTML += clickedButtonId;
+    } else {
+        return;
     }
 }
 
@@ -142,7 +144,7 @@ function negative() {
 
 // to devide the number after the last operator by 100
 function percentage() {
-    
+
     if (theResult.innerHTML != 0) {
         theResult.innerHTML /= 100;
     }
@@ -182,8 +184,8 @@ function percentage() {
 function showResult() {
 
     // to check if there is an operator at the end of the formula
-    if (operators.includes(theFormula.innerHTML[theFormula.innerHTML.length - 1]) 
-    || theFormula.innerHTML[theFormula.innerHTML.length - 1] == '.') {
+    if (operators.includes(theFormula.innerHTML[theFormula.innerHTML.length - 1])
+        || theFormula.innerHTML[theFormula.innerHTML.length - 1] == '.') {
         removeNumber();
         theResult.innerHTML = eval(theFormula.innerHTML);
     } else {

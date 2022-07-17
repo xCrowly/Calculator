@@ -5,10 +5,10 @@
     padding: auto;
     border: 5px solid rgb(0, 0, 0);
     border-radius: 5px;
+
 }
 
 .cal-result {
-    height: 140px;
     background: rgb(240, 239, 239) !important;
     padding: 15px 5px;
 }
@@ -25,7 +25,7 @@
     font-size: 25px;
     border: 1px solid antiquewhite;
     transition: all .13s ease-in-out;
-    
+
     &:hover {
         filter: opacity(.8);
         cursor: pointer;
