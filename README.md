@@ -1,3 +1,3 @@
 # Calculator
 Calculator web app written by javaScript.
-[Link](xcrowly.github.io/calculator/)
+[Link](http://xcrowly.github.io/calculator/)
